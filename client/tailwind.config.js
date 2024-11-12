@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        glyphic: ["Faculty Glyphic"],
+        sora: ["Sora"],
+        noto: ["Noto Serif Display", "serif"],
+      },
+    },
   },
   plugins: [],
 };
