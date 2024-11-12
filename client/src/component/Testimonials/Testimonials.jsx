@@ -2,28 +2,31 @@ import React from "react";
 import ceo1 from "../../assets/CEO1.png";
 import ceo2 from "../../assets/CEO2.png";
 import ceo3 from "../../assets/CEO3.png";
-
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 
 const Testimonials = () => {
   return (
-    <div className="flex w-full h-full mt-28">
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-6">
-        <h1 className="text-blue-600 text-xl font-noto">
-          SOFTWARE DEVELOPERS, CONTENT CREATORS LOVE CODENEST
-        </h1>
-        <h1 className="text-3xl text-gray-600 font-noto mt-4">Testimonials</h1>
-        <p className="text-gray-100 font-glyphic font-bold mt-4">
-          Don't just take our word for it, read from our extensive list of case
-          studies and customer testimonials.
-        </p>
-        <button className="mt-10 p-2 flex justify-center items-center w-[170px] h-12 rounded-md text-base text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
-          View Case Studies
-        </button>
-      </div>
+    <div className="w-full h-full mt-28 overflow-x-hidden px-4 sm:px-8">
+      <div className="flex flex-col sm:flex-row w-full">
+        {/* Left Side (Text and button) */}
+        <div className="w-full sm:w-1/2 flex flex-col justify-center items-start p-4 sm:p-6">
+          <h1 className="text-blue-600 text-lg sm:text-xl font-noto">
+            SOFTWARE DEVELOPERS, CONTENT CREATORS LOVE CODENEST
+          </h1>
+          <h1 className="text-2xl sm:text-3xl text-gray-600 font-noto mt-4">
+            Testimonials
+          </h1>
+          <p className="text-gray-100 font-glyphic font-bold mt-4 text-sm sm:text-base">
+            Don't just take our word for it, read from our extensive list of
+            case studies...
+          </p>
+          <button className="mt-8 p-2 w-[170px] h-12 rounded-md text-base text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
+            View Case Studies
+          </button>
+        </div>
 
-      <div className="w-[400px] flex flex-col justify-center items-start p-6">
-        <div className="space-y-6">
+        {/* Right Side (Testimonials) */}
+        <div className="w-full sm:w-1/2 flex flex-col justify-center items-start p-4 sm:p-6 space-y-6">
           {testimonialsData.map((testimonial, index) => (
             <TestimonialsCard
               key={index}
@@ -39,13 +42,17 @@ const Testimonials = () => {
 };
 
 const TestimonialsCard = ({ title, description, image }) => (
-  <div className="bg-white p-6 rounded-lg shadow-lg ">
-    <p className="text-gray-600 flex text-justify font-noto">
-      <BiSolidQuoteAltLeft className=" text-4xl w-[300px] text-blue-600 mr-4 " />
-      "{description}
-      <img src={image} alt="ceo" className="w-24 h-24 rounded-full ml-4 " />
+  <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
+    <p className="text-gray-600 flex text-justify font-noto text-sm sm:text-base">
+      <BiSolidQuoteAltLeft className="text-3xl sm:text-4xl text-blue-600 mr-4" />
+      "{description}"
+      <img
+        src={image}
+        alt="ceo"
+        className="w-20 h-20 sm:w-24 sm:h-24 rounded-full ml-4"
+      />
     </p>
-    <h2 className="text-lg font-extrabold text-gray-800 pl-12 font-noto mt-4">
+    <h2 className="text-lg sm:text-xl font-extrabold text-gray-800 pl-8 sm:pl-12 font-noto mt-4">
       {title}
     </h2>
   </div>

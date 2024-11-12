@@ -35,18 +35,21 @@ const Faq = () => {
   ];
 
   return (
-    <div className="h-full ml-24 mr-24 mt-28">
-      <h1 className="text-yellow-400 text-4xl font-glyphic border-b border-white pb-10 ">
+    <div className="h-full px-4 sm:px-8 md:px-24 mt-28 overflow-x-hidden">
+      <h1 className="text-yellow-400 text-4xl font-glyphic border-b border-white pb-10">
         Frequently Asked Questions
       </h1>
 
       {faqData.map((item, index) => (
-        <div key={index} className="border-b border-white pb-10 pt-10 pl-4">
+        <div
+          key={index}
+          className="border-b border-white pb-10 pt-10 pl-4 sm:pl-6"
+        >
           <div
             className="flex justify-between items-center text-yellow-400 font-sora cursor-pointer"
             onClick={() => toggleAnswer(index)}
           >
-            <p className="font-noto text-2xl">{item.question}</p>
+            <p className="font-noto text-xl sm:text-2xl">{item.question}</p>
             {openIndex === index ? (
               <FaMinus className="text-yellow-400" />
             ) : (
@@ -55,7 +58,7 @@ const Faq = () => {
           </div>
 
           {openIndex === index && (
-            <p className="text-gray-100 mt-4 font-noto text-xl">
+            <p className="text-gray-100 mt-4 font-noto text-base sm:text-xl">
               {item.answer}
             </p>
           )}

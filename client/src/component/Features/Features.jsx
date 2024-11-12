@@ -4,31 +4,26 @@ import { LuMousePointerClick } from "react-icons/lu";
 
 const Features = () => {
   return (
-    <div className="flex w-full h-full  pt-28">
-      <div className="w-[600px]  p-6">
-        <h1 className="text-4xl  font-extrabold tracking-wide font-noto mb-6 text-yellow-400">
-          Elevate Your Coding Game with CodeNest - The Ultimate Snippet Manager
-          for Developers and Content Creators.
+    <div className="w-full h-full pt-28 px-4 md:px-8 overflow-x-hidden">
+      <div className="w-full md:w-[600px] p-6">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-wide font-noto mb-6 text-yellow-400">
+          Elevate Your Coding Game with CodeNest
         </h1>
         <p className="text-gray-100 text-justify font-bold tracking-wide mb-10 font-noto">
-          Unlock Your Coding Potential with CodeNest! Elevate your development
-          game by effortlessly organizing, storing, and sharing your code
-          snippets. With robust features like intelligent tagging, sleek syntax
-          highlighting, and seamless collaboration tools, CodeNest empowers
-          developers and content creators to streamline their workflow and
-          unleash creativity. Transform the way you code—join the nest today!
+          Unlock Your Coding Potential with CodeNest!
         </p>
-        <div className="flex space-x-4">
-          <button className="flex justify-center items-center w-36 h-12 rounded-md text-base text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
+        <div className="flex flex-wrap gap-4">
+          <button className="flex justify-center items-center w-full sm:w-36 h-12 rounded-md text-base text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
             Get Started <FaArrowRight className="ml-1" />
           </button>
-          <button className="ml-4 flex justify-center items-center w-36 h-12 rounded-md text-base text-blue-600 hover:text-white font-normal tracking-wide font-noto bg-blue-200 hover:bg-blue-600">
+          <button className="flex justify-center items-center w-full sm:w-36 h-12 rounded-md text-base text-blue-600 hover:text-white font-normal tracking-wide font-noto bg-blue-200 hover:bg-blue-600">
             Book a demo <LuMousePointerClick className="ml-1" />
           </button>
         </div>
       </div>
 
-      <div className="w-[850px] grid grid-cols-1 sm:grid-cols-2 p-6">
+      {/* Features Grid Section */}
+      <div className="w-full p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {featuresData.map((feature, index) => (
           <FeatureCard
             key={index}
@@ -47,7 +42,9 @@ const FeatureCard = ({ title, description }) => (
     <h2 className="text-lg font-extrabold text-yellow-400 mb-2 font-noto">
       {title}
     </h2>
-    <p className="text-justify font-noto font-bold">{description}</p>
+    <p className="text-justify font-noto font-bold text-sm sm:text-base">
+      {description}
+    </p>
   </div>
 );
 
