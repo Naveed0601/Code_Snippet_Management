@@ -3,6 +3,7 @@ import ceo1 from "../../assets/CEO1.png";
 import ceo2 from "../../assets/CEO2.png";
 import ceo3 from "../../assets/CEO3.png";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   return (
@@ -20,9 +21,11 @@ const Testimonials = () => {
             Don't just take our word for it, read from our extensive list of
             case studies...
           </p>
-          <button className="mt-8 p-2 w-[170px] h-12 rounded-md text-base text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
-            View Case Studies
-          </button>
+          <Link to={"/login"}>
+            <button className="mt-8 p-2 w-[170px] h-12 rounded-md text-base text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
+              View Case Studies
+            </button>
+          </Link>
         </div>
 
         {/* Right Side (Testimonials) */}

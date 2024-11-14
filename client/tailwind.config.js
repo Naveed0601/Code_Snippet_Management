@@ -8,6 +8,10 @@ module.exports = {
         sora: ["Sora"],
         noto: ["Noto Serif Display", "serif"],
       },
+      colors: {
+        "custom-brown": "#553922",
+        "custom-brown2": "#C3824E",
+      },
     },
   },
   plugins: [],

@@ -1,6 +1,7 @@
 import React from "react";
 import about_us from "../../assets/about_us.png";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -29,9 +30,11 @@ const AboutUs = () => {
             a seasoned developer or just starting, CodeNest helps improve
             productivity and streamline your workflow.
           </p>
-          <button className="mt-10 flex justify-center items-center w-full sm:w-36 h-12 rounded-md text-base sm:text-lg text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
-            Get Started <FaArrowRight className="ml-1" />
-          </button>
+          <Link to={"/login"}>
+            <button className="mt-10 flex justify-center items-center w-full sm:w-36 h-12 rounded-md text-base sm:text-lg text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
+              Get Started <FaArrowRight className="ml-1" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

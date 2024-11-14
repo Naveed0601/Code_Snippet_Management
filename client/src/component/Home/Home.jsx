@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { LuMousePointerClick } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -19,12 +20,16 @@ const Home = () => {
 
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
-        <button className="flex justify-center items-center w-full sm:w-36 h-12 rounded-md text-base sm:text-lg text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
-          Get Started <FaArrowRight className="ml-1" />
-        </button>
-        <button className="flex justify-center items-center w-full sm:w-36 h-12 rounded-md text-base sm:text-lg text-blue-600 hover:text-white font-normal tracking-wide font-noto bg-blue-200 hover:bg-blue-600">
-          Book a demo <LuMousePointerClick className="ml-1" />
-        </button>
+        <Link to={"/login"}>
+          <button className="flex justify-center items-center w-full sm:w-36 h-12 rounded-md text-base sm:text-lg text-white hover:text-blue-600 font-normal tracking-wide font-noto bg-blue-600 hover:bg-blue-200">
+            Get Started <FaArrowRight className="ml-1" />
+          </button>
+        </Link>
+        <Link to={"/login"}>
+          <button className="flex justify-center items-center w-full sm:w-36 h-12 rounded-md text-base sm:text-lg text-blue-600 hover:text-white font-normal tracking-wide font-noto bg-blue-200 hover:bg-blue-600">
+            Book a demo <LuMousePointerClick className="ml-1" />
+          </button>
+        </Link>
       </div>
     </div>
   );
