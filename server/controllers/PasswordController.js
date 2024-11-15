@@ -17,7 +17,7 @@ const forget_password = async (req, res) => {
     const hashedToken = await bcrypt.hash(token, 10);
 
     user.resetToken = hashedToken;
-    user.resetTokenExpiration = Date.now() + 3600000; // Token expires in 1 hour
+    user.resetTokenExpiration = Date.now() + 3600000;
     await user.save();
 
     const transporter = nodemailer.createTransport({

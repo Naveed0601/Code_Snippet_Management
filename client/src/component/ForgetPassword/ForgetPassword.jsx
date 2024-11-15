@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import backgroundwhite from "../../assets/background_white.png";
 import rectangle from "../../assets/Rectangle3.png";
+import { Link } from "react-router-dom";
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -46,13 +47,13 @@ function ForgotPassword() {
           alt="rectangle"
           className="absolute top-[240px] left-0 w-full rounded-2xl h-[315px] object-cover"
         />
-        <h1 className="absolute top-[295px] ml-8 font-semibold font-sora text-xl">
+        <h1 className="absolute top-[275px] ml-8 font-semibold font-sora text-xl">
           FORGOT PASSWORD
         </h1>
-        <p className="absolute top-[325px] text-sm ml-8 mr-12 text-gray-950 font-sora">
+        <p className="absolute top-[305px] text-sm ml-8 mr-12 text-gray-950 font-sora">
           Provide your account's email for which you want to reset your password
         </p>
-        <div className="flex flex-col relative ml-8 mt-[-30px]">
+        <div className="flex flex-col relative ml-8 mt-[-70px]">
           <label className="text-[12px] mb-2">Email ID</label>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input
@@ -70,12 +71,14 @@ function ForgotPassword() {
                 Please enter your registered email
               </p>
             )}
-            <button
-              type="submit"
-              className="rounded-lg text-white font-sora font-bold bg-indigo-900 w-[280px] h-11"
-            >
-              Request reset password link
-            </button>
+            <Link to={"/emailreceive"}>
+              <button
+                type="submit"
+                className="rounded-lg text-white font-sora font-bold bg-indigo-900 w-[280px] h-11"
+              >
+                Request reset password link
+              </button>
+            </Link>
           </form>
         </div>
       </div>

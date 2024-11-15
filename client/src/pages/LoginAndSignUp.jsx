@@ -4,6 +4,7 @@ import Login from "../component/Login/Login";
 import SignUp from "../component/SignUp/SignUp";
 import ForgotPassword from "../component/ForgetPassword/ForgetPassword";
 import ResetPassword from "../component/ResetPassword/ResetPassword";
+import EmailReceive from "../component/ForgetPassword/EmailReceive";
 
 const LoginAndSignUp = () => {
   return (
@@ -13,6 +14,7 @@ const LoginAndSignUp = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/resetpassword/:token" element={<ResetPassword />} />
+        <Route path="/emailreceive" element={<EmailReceive />}></Route>
       </Routes>
     </div>
   );
